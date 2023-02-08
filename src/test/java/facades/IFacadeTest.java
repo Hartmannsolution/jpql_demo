@@ -42,13 +42,25 @@ class IFacadeTest {
 
     @Test
     void getAllBelowAverage() {
+        System.out.println("Get employees with below average salery ");
+        double expected = 14166.666666666666;
+        double actual = facade.getAverageSalery();
+        assertEquals(expected, actual);
     }
 
     @Test
     void getWithMostEmployees() {
+        System.out.println("Get department with most employees");
+        int expected = 4;
+        int actual = facade.getWithMostEmployees().getEmployees().size();
+        assertEquals(expected, actual);
     }
 
     @Test
     void getMostExpensiveSalarySum() {
+        System.out.println("Get department with most expensive salary sum");
+        String expected = "Holsterbro";
+        String actual = facade.getMostExpensiveSalarySum().getName();
+        assertEquals(expected, actual);
     }
 }
